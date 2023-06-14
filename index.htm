@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(120deg, #fa0909, #ff8800, rgb(252, 214, 0));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .centro{
+            width: 200px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .resposta{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .eventoButton {
+          position: absolute;
+          left: 5;
+          top: 10;
+        } 
+        button{
+            display: flex;
+            width: 90px;
+            height: 25px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="centro">
+       <h1>Você gosta da Rita Lee? :)</h1>
+    <div class="resposta">
+        <div class="sim">
+            <a href="https://www.youtube.com/watch?v=ho-iGFctXe8">
+                <button class="buttonSim">Sim!</button>
+            </a>
+        </div>
+        <div class="nao">
+            <button class="eventoButton" id="eventoButton">Não!</button> 
+        </div>
+    </div>
+            
+         
+    </div>
+    
+    
+
+<script>
+
+    const button = document.getElementById('eventoButton');
+
+    button.addEventListener('click', function() {
+    const left = Math.random() * window.innerWidth;
+    const top = Math.random() * window.innerHeight;
+    button.style.left = left + 'px';
+    button.style.top = top + 'px';
+    });
+
+</script>
+</body>
+</html>
